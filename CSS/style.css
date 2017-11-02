@@ -121,10 +121,10 @@ section.team .team-header i{
 }
 section.team .team-text{
   width: 540px;
-  height: 332px;
   margin-top: -90px;
   background-color: #333338;
   color: #fff;
+  padding-bottom: 50px;
 }
 section.team .team-text h4{
   line-height: 0px;
@@ -151,34 +151,36 @@ section.team .team-text hr{
   width: 400px;
   background-color: lightgrey;
 }
-section.team .img-holder{
-  margin-top: -50px;
-}
-section.team .img-holder img{
-  width: 160px;
-  height: 160px;
-}
-section.team .icon-holder{
-  text-align: center;
-}
-section.team .icon-holder-left{
-  /*text-align: center;*/
+section.team .team-members {
+  display:flex;
+  flex-wrap: wrap;
   padding-left: 50px;
+  margin-top: -50px;
+  position: absolute;
 }
-section.team #img-active img{
-  width: 189px;
-  height: 189px;
+section.team .team-members .team-pick {
+  margin: 0 20px;
 }
-section.team .team-name{
-  width: 189px;
-  height: 53px;
-  line-height: 53px;
-  padding-left: 10px;
-  background-color: #333338;
-  color: #fff;
+section.team .team-members .team-arrow {
+  margin: 20px;
+  align-self: center;
 }
 section.team .team-more{
 margin-top: 60px;
+padding-bottom: 30px;
+}
+@media screen and (max-width: 768px) {
+  section.team .team-text{
+    width: 540px;
+    height: 332px;
+    margin-top: 10px;
+    background-color: #333338;
+    color: #fff;
+    padding-bottom: 50px;
+  }
+  section.team .img-holder {
+    margin-top: 0;
+}
 }
 /* section.events .img-holder img{
   width: 350px;
@@ -202,45 +204,86 @@ section.events .events-header h1{
 }
 section.events .event-block{
   background-color: #ffbe08;
-  height: 600px;
+  margin-bottom: 30px;
 }
 section.events .event-block h3{
-  padding: 30px 0 0 30px;
   font-size: 26px;
   font-weight: 400;
   height: 90px;
 }
-section.events .events-text .img-date{
-  background-color: #333338;
-  color: #fff;
-  width: 80px;
-  height: 70px;
-  text-align: center;
-  padding: 0 4px;
-}
-section.events .events-text .img-date .date{
-  font-size: 20px;
-}
-section.events .events-text .img-date hr{
-  margin: 0 auto;
-  text-align: center;
-  background-color: #fff;
-  width: 60px;
-}
-section.events .events-text .img-date .time{
-  font-size: 12px;
-}
-section.events .events-text .img-adress{
-  padding-top: 10px;
-  font-size: 18px;
-}
+
+
 section.events .events-more{
-  padding-top: 100px;
+  padding: 100px 15px 30px 0;
   text-decoration: none;
   text-align: right;
 }
 section.events .events-more a{
   color: #fff;
+}
+section.events .date-time {
+  border-top: 1px solid #333338;
+  height: 100px;
+  color: #fff;
+}
+
+section.events .date-box {
+  background-color: #333338;
+  height: 100px;
+  width: 120px;
+  text-align: center;
+  padding-top: 10px;
+}
+section.events .event-info {
+  padding: 30px;
+}
+section.events .event-info h5 {
+  margin-top: 20px;
+}
+
+section.events .date {
+  font-size: 26px;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 5px;
+}
+section.events .time{
+  margin-top: 10px;
+}
+@media screen and (max-width: 992px) {
+  section.events .event-info h5 {
+    display: none;
+  }
+  section.events .date-time {
+    border-top: 1px solid #333338;
+    height: auto;
+    color: #fff;
+  }
+  
+  section.events .date-box {
+    background-color: #333338;
+    height: auto;
+    width: 280px;
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+  }
+  section.events .date {
+    font-size: 26px;
+    border-bottom: none;
+    border-right: 1px solid #fff;
+    padding-bottom: 5px;
+    padding-right: 30px;
+  }
+  section.events .time{
+    display: inline;
+    font-size: 22px;
+    margin-left: 20px;
+  }
+  section.events .events-more{
+    padding: 30px 15px 30px 0;
+  }
 }
 section.gallery{
   height: auto;
@@ -282,7 +325,7 @@ section.study .rotated-study{
   float: left;
   text-align: right;
   position: absolute;
-  left: -85px;
+  left: -120px;
   margin-top: 200px;
   /* Safari */
 -webkit-transform: rotate(-90deg);
@@ -342,7 +385,6 @@ section.study .study-more span{
   font-weight: 300;
   color: #333338;
   text-decoration: none;
-  padding-right: 50px;
 }
 section.blog {
   width: 100%;
@@ -469,6 +511,7 @@ section.contacts .contact-cont {
     text-align: center;
     float: left;
     margin-right: 30px;
+    margin: 70px 30px 70px 0;
   }
   section.study .icon-text {
     text-align: left;
@@ -524,11 +567,12 @@ section.study .icon-text h3 {
     margin-bottom: 0;
   }
 }
-@media (max-width: 795px){
+
+/* @media (max-width: 795px){
   section.events .event-block h3 {
     padding: 30px 0 0 30px;
     font-size: 26px;
     font-weight: 400;
     height: 120px;
 }
-}
+} */
