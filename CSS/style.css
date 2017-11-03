@@ -104,7 +104,7 @@ section.about .about-more span{
   float: left;
 }
 section.team {
-  height: auto;
+  height: 1000px;
   width: 100%;
   background-color: #FFBE08;
 }
@@ -148,7 +148,6 @@ section.team .team-text p{
   padding-left: 40px;
 }
 section.team .team-text hr{
-  width: 400px;
   background-color: lightgrey;
 }
 section.team .team-members {
@@ -157,10 +156,35 @@ section.team .team-members {
   padding-left: 50px;
   margin-top: -50px;
   position: absolute;
+  left: 100px;
 }
 section.team .team-members .team-pick {
-  margin: 0 20px;
+  margin: 0 10px;
 }
+section.team .team-members .member-selected {
+  background-color: #333338;
+color: #fff;
+text-align: center;
+}
+section.team .team-members .member-selected p{
+margin: 10px;
+}
+
+@media screen and (max-width: 1268px) {
+  section.team .team-members {
+    left: 0;
+  }
+}
+@media screen and (max-width: 965px) {
+  section.team .team-members {
+    left: 0;
+    padding-left: 0;
+  }
+  section.team .team-members .team-pick {
+    margin: 0;
+}
+}
+
 section.team .team-members .team-arrow {
   margin: 20px;
   align-self: center;
@@ -171,7 +195,7 @@ padding-bottom: 30px;
 }
 @media screen and (max-width: 768px) {
   section.team .team-text{
-    width: 540px;
+    width: 100%;
     height: 332px;
     margin-top: 10px;
     background-color: #333338;
@@ -180,6 +204,13 @@ padding-bottom: 30px;
   }
   section.team .img-holder {
     margin-top: 0;
+}
+section.team .team-members {
+  display:flex;
+  flex-wrap: wrap;
+}
+section.team .team-members .team-pick {
+  position: absolute;
 }
 }
 /* section.events .img-holder img{
