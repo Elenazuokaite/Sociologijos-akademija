@@ -4,15 +4,14 @@ body{
 .bg-yellow{
   background-color: #ffbe08;
 }
-nav .mb-logo{
+nav .mb-logo {
   position: absolute;
   width: 80px;
   height: 80px;
   margin: 0 auto;
   left: 50%;
-  margin-left: -59px;
+  margin-left: -40px;
   top: 8px;
-
 }
 nav .mb-logo img{
   width: 80px;
@@ -46,15 +45,22 @@ nav .logo-holder img{
   border: none;
 }
 .hero{
+      background-image: url('../img/slice12.jpg');
       background-size: 100% auto;
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: top;
       height: 480px;
       margin: 0 auto;
 }
+.hero h1 {
+  display: none;
+}
+.hero img {
+  display: none;
+}
 section.about{
-  height: 560px;
-  padding: 70px 0;
+  padding-top: 70px;
+  padding-bottom: 150px;
 }
 .rotated-about{
   /*max-width: 400px;*/
@@ -93,7 +99,7 @@ section.about .about-more span{
   font-weight: 300;
   color: #333338;
   text-decoration: none;
-  padding-right: 50px;
+  padding-right: 10px;
 }
 .fa-circle {
   /*text-shadow: -7px 1px 1px lightgrey, -3px 5px lightgrey;*/
@@ -103,8 +109,11 @@ section.about .about-more span{
 .video-holder{
   float: left;
 }
+.video-holder img{
+  width: 300px;
+}
 section.team {
-  height: 1000px;
+  height: 550px;
   width: 100%;
   background-color: #FFBE08;
 }
@@ -160,16 +169,63 @@ section.team .team-members {
 }
 section.team .team-members .team-pick {
   margin: 0 10px;
-}
-section.team .team-members .member-selected {
-  background-color: #333338;
-color: #fff;
-text-align: center;
-}
-section.team .team-members .member-selected p{
-margin: 10px;
+  color: #fff;
+  text-align: center;
 }
 
+section.team .team-members .main-member p{
+  padding: 10px;
+  background-color: #333338;
+  width: 160px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 425px) {
+  section.about .about-content {
+    padding: 0;
+  }
+  section.about .about-content img {
+    width: 100%;
+  }
+  section.about .about-text {
+    margin-top: 20px;
+  }
+ .about-mobile {
+    margin-top: -56px;
+  }
+  .about-mobile h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: 800;
+}
+  .hero{
+    background-image: url('../img/mobile.png');
+    background-size: 100% 480px;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 480px;
+    margin: 0 auto;
+}
+.hero .hero-line h1 {
+  display: block;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 36px;
+  font-weight: 900;
+  text-align: center;
+  padding-top: 100px;
+}
+.hero .hero-line {
+  background-image: url('../img/mobile1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 480px;
+  margin: 0 auto;
+}
+}
 @media screen and (max-width: 1268px) {
   section.team .team-members {
     left: 0;
@@ -190,13 +246,16 @@ section.team .team-members .team-arrow {
   align-self: center;
 }
 section.team .team-more{
-margin-top: 60px;
-padding-bottom: 30px;
+  margin-top: 150px;
+  padding-bottom: 30px;
+  text-align: right;
 }
 @media screen and (max-width: 768px) {
+  section.team {
+    height: 800px;
+  }
   section.team .team-text{
     width: 100%;
-    height: 332px;
     margin-top: 10px;
     background-color: #333338;
     color: #fff;
@@ -208,10 +267,96 @@ padding-bottom: 30px;
 section.team .team-members {
   display:flex;
   flex-wrap: wrap;
+  position: relative;
 }
 section.team .team-members .team-pick {
   position: absolute;
+  left:0;
+  right: 0;
 }
+section.team .team-members .first-member {
+  margin-top: 20px;
+  margin-left: 40px;
+}
+section.team .team-members .first-member p{
+  padding: 10px;
+  background-color: rgba(51, 51, 56, 0.48);
+  width: 160px;
+  margin: 0 auto;  height: 44px;
+}
+section.team .team-members .second-member {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+section.team .team-members .second-member p{
+  padding: 10px;
+  background-color: rgba(51, 51, 56, 0.48);
+  width: 160px;
+  margin: 0 auto;  height: 44px;
+}
+section.team .team-members .team-arrow-left {
+position: absolute;
+text-align: center;
+top: 50px;
+left: 100px;
+}
+section.team .team-members .team-arrow-right {
+  position: absolute;
+  text-align: center;
+  top: 50px;
+  right: 100px;
+  }
+  section.team .team-more{
+    margin-top: 250px;
+    padding-bottom: 30px;
+    text-align: right;
+  }
+  section.team i {
+    display: none;
+  }
+  .hero{
+    background-image: url('../img/mobile.png');
+    background-size: 100% 480px;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 480px;
+    margin: 0 auto;
+}
+.hero .hero-line h1 {
+  display: block;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 36px;
+  font-weight: 900;
+  text-align: center;
+  padding-top: 100px;
+}
+.hero .hero-line {
+  background-image: url('../img/mobile1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 480px;
+  margin: 0 auto;
+}
+}
+@media (min-width:770px) and (max-width:950px) {
+  .hero {
+    background-image: url(../img/slice12.jpg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 350px;
+    margin: 0 auto;
+}
+}
+@media screen and (max-width: 500px) {
+  section.team .team-members .team-arrow-left {
+    left: 20px;
+    }
+    section.team .team-members .team-arrow-right {
+      right: 20px;
+      }
 }
 /* section.events .img-holder img{
   width: 350px;
@@ -281,6 +426,13 @@ section.events .time{
   margin-top: 10px;
 }
 @media screen and (max-width: 992px) {
+  .rotated-about{
+    display: none;  
+  }
+  section.about {
+    padding-top: 0px;
+    padding-bottom: 50px;
+  }
   section.events .event-info h5 {
     display: none;
   }
