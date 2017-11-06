@@ -82,6 +82,9 @@ section.about{
 /* Internet Explorer */
 filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
+section.about .about-mobile {
+  text-align: center;
+}
 section.about .about-text{
   margin-top: 50px;
   text-align: left;
@@ -91,8 +94,9 @@ section.about .about-more{
   text-align: right;
 }
 section.about .about-more a{
-  font-weight: 600;
+  font-weight: 800;
   color: #333338;
+  font-size: 14px;
   text-decoration: none;
 }
 section.about .about-more span{
@@ -107,7 +111,7 @@ section.about .about-more span{
   margin-left: 5px;
 }
 .video-holder{
-  float: left;
+  text-align: center;
 }
 .video-holder img{
   width: 300px;
@@ -180,7 +184,12 @@ section.team .team-members .main-member p{
   margin: 0 auto;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (min-width: 992px) {
+  .about-mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 426px) {
   section.about .about-content {
     padding: 0;
   }
@@ -246,11 +255,26 @@ section.team .team-members .team-arrow {
   align-self: center;
 }
 section.team .team-more{
-  margin-top: 150px;
+  margin-top: 180px;
   padding-bottom: 30px;
   text-align: right;
 }
+section.team .team-more a {
+  font-weight: 800;
+  color: #333338;
+  font-size: 14px;
+  text-decoration: none;
+}
 @media screen and (max-width: 768px) {
+  section.about .about-mobile h1 {
+    color: #fff;
+    margin-top: -49px;
+    font-size: 34px;
+    font-weight: 800;
+  }
+  section.about {
+    padding-bottom: 50px;
+  }
   section.team {
     height: 800px;
   }
@@ -311,7 +335,8 @@ section.team .team-members .team-arrow-right {
     padding-bottom: 30px;
     text-align: right;
   }
-  section.team i {
+  
+  section.team i.fa-circle {
     display: none;
   }
   .hero{
@@ -338,6 +363,11 @@ section.team .team-members .team-arrow-right {
   background-position: top;
   height: 480px;
   margin: 0 auto;
+}
+}
+@media screen and (max-width: 375px) {
+  section.team {
+    height: 850px;
 }
 }
 @media (min-width:770px) and (max-width:950px) {
@@ -393,9 +423,13 @@ section.events .events-more{
   padding: 100px 15px 30px 0;
   text-decoration: none;
   text-align: right;
+  color: #fff;
 }
 section.events .events-more a{
   color: #fff;
+  font-weight: 800;
+  font-size: 14px;
+  text-decoration: none;
 }
 section.events .date-time {
   border-top: 1px solid #333338;
@@ -431,7 +465,6 @@ section.events .time{
   }
   section.about {
     padding-top: 0px;
-    padding-bottom: 50px;
   }
   section.events .event-info h5 {
     display: none;
@@ -497,6 +530,9 @@ section.gallery .gallery-more{
 }
 section.gallery .gallery-more a{
   color: #333338;
+  font-weight: 800;
+  font-size: 14px;
+  text-decoration: none;
 }
 section.study{
   margin-top: 100px;
@@ -560,8 +596,9 @@ section.study .study-more{
   padding-bottom: 50px;
 }
 section.study .study-more a{
-  font-weight: 600;
   color: #333338;
+  font-weight: 800;
+  font-size: 14px;
   text-decoration: none;
 }
 section.study .study-more span{
@@ -606,6 +643,9 @@ section.blog .blog-more {
   text-align: right;
 }
 section.blog .blog-more a {
+  font-weight: 800;
+  font-size: 14px;
+  text-decoration: none;
   color: #fff;
 }
 section.blog .blog-more a:hover {
@@ -647,7 +687,10 @@ section.feedback .feedback-more {
   text-align: right;
 }
 section.feedback .feedback-more a {
-  color: #333338;
+    font-weight: 800;
+    color: #333338;
+    font-size: 14px;
+    text-decoration: none;
 }
 section.feedback .feedback-more a:hover {
   text-decoration: none;
