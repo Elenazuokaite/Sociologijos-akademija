@@ -98,6 +98,11 @@ border-radius: 30px;
 .blog-img {
     width: 100%;
 }
+@media screen and (max-width: 768px) {
+    section.blog-posts .qoute-dark h4 {
+        padding: 0;
+    }
+}    
 @media screen and (max-width: 710px) {
     section.blog-hero .blog-heading {
         margin-right: 0;
@@ -120,9 +125,7 @@ border-radius: 30px;
         justify-content: center;
         align-items: center;  
     }
-    section.blog-posts .qoute-dark h4 {
-        padding: 0;
-    }
+    
     section.blog-posts .blog-post-block {
         padding-left: 15px;
     }

@@ -769,7 +769,7 @@ section.study .icon-text h3 {
     display: none;
   }
   section.contacts {
-    background: url("../img/bubble-contact.png") no-repeat top center;
+    /* background: url("../img/bubble-contact.png") no-repeat top center; */
     background-color: #333338;
 
   }
