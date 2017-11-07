@@ -11,7 +11,7 @@ section.blog-hero .blog-heading {
     color: #fff;
     margin-right: 60px;
 }
-.blog-heading h1 {
+section.blog-hero .blog-heading h1 {
     font-weight: 900;
     font-size: 80px;
 }
@@ -45,9 +45,6 @@ section.blog-posts .blog-post-block {
 section.blog-posts .blog-post-block h4 {
     margin: 20px 0;
 }
-/* section.blog-posts .blog-post-block hr {
-    background-color: #333338;
-} */
 section.blog-posts .blog-post-block p {
     line-height: 2em;
     margin-bottom: 0;

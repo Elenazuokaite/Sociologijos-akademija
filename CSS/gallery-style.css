@@ -6,11 +6,13 @@ section.gallery-hero {
     justify-content: center;
     align-items: center;
     color: #fff;
+    
 }
 section.gallery-hero h1 {
     text-transform: uppercase;
     font-weight: 900;
     margin: 150px 0;
+    font-size: 50px;
 }
 section.gallery-hero a {
     margin: 0 20px;
